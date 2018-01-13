@@ -32,14 +32,26 @@ require 'random_data'
 # puts "#{Post.count} posts created"
 # puts "#{Comment.count} comments created"
 
-# Create Advertisements
+# # Create Advertisements
+# 50.times do
+#   Advertisement.create!(
+#     title: RandomData.random_sentence,
+#     copy: RandomData.random_paragraph,
+#     price: RandomData.random_price
+#   )
+# end
+#
+# puts "Seed finished"
+# puts "#{Advertisement.count} advertisements created"
+
+# Create Questions
 50.times do
-  Advertisement.create!(
+  Question.create!(
     title: RandomData.random_sentence,
-    copy: RandomData.random_paragraph,
-    price: RandomData.random_price
+    body: RandomData.random_paragraph,
+    resolved: false
   )
 end
 
 puts "Seed finished"
-puts "#{Advertisement.count} advertisements created"
+puts "#{Question.count} questions created"
