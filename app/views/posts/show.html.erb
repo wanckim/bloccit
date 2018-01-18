@@ -2,7 +2,17 @@
 
 <div class="row">
   <div class="col-md-8">
-    <p><%= @post.body %></p>
+    <p><%= @post.body %></p><br>
+    <h5>Comments :</h5>
+    <% @post.comments.each do |comment| %>
+      <div class="media">
+        <div class="media-body">
+          <small class="media-heading">
+            - <%= comment.body %>
+          </small>
+        </div>
+      </div>
+    <% end %>
   </div>
   <div class="col-md-4">
     <%= link_to "Edit", edit_topic_post_path(@post.topic, @post), class: "btn btn-success" %>
