@@ -39,6 +39,8 @@ source 'https://rubygems.org'
 
  gem 'bootstrap-sass'
 
+ gem 'bcrypt'
+
  group :development do
    gem 'listen', '~> 3.0.5'
  end
