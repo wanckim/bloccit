@@ -16,3 +16,10 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.profile_img {
+  display: inline-block;
+  width: 72px;
+  float: right;
+  margin-right: 5px;
+}
