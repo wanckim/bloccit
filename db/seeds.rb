@@ -51,11 +51,18 @@ end
 #   body: "This is unique comment body!"
 # )
 
-user = User.first
-user.update_attributes!(
-  name: "Wan Cheul",
-  email: "wckim88@gmail.com",
-  password: "password"
+admin = User.create!(
+  name: "Admin User",
+  email: "admin@example.com",
+  password: "password",
+  role: 'admin'
+)
+
+member = User.create!(
+  name: "Member User",
+  email: "member@example.com",
+  password: "password",
+  role: 'member'
 )
 
 puts "Seed finished"

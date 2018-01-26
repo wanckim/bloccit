@@ -49,6 +49,7 @@ source 'https://rubygems.org'
    gem 'rspec-rails', '~> 3.0'
    gem 'rails-controller-testing'
    gem 'shoulda'
+   gem 'byebug'
  end
 
  group :development do
