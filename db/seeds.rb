@@ -31,25 +31,16 @@ topics = Topic.all
   )
 end
 
-# Post.find_or_create_by!(
-#   title: "This is unique title!",
-#   body: "This is unique body!"
-# )
-
 posts = Post.all
 
 # Create Comments
 100.times do
   Comment.create!(
+    user: users.sample,
     post: posts.sample,
     body: RandomData.random_paragraph
   )
 end
-
-# Comment.find_or_create_by!(
-#   post: posts.find_by(title: "This is unique title!"),
-#   body: "This is unique comment body!"
-# )
 
 admin = User.create!(
   name: "Admin User",
