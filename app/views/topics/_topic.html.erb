@@ -1,0 +1,14 @@
+<div class="col-md-8">
+  <% topic.each do |t| %>
+    <div class="media">
+      <div class="media-body">
+        <h4 class="media-heading">
+          <%= link_to t.name, t %>
+        </h4>
+        <samll>
+          <%= t.description %>
+        </small>
+      </div>
+    </div>
+  <% end %>
+</div>
