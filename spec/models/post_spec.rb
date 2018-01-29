@@ -78,4 +78,13 @@ RSpec.describe Post, type: :model do
     end
   end
 
+  describe "#create_vote" do
+    it "creates an up vote as the user creates a post" do
+      post = topic.posts.new(title:title, body: body, user: user)
+      expect(post).to receive(:create_vote)
+
+      post.save
+    end
+  end
+
 end
