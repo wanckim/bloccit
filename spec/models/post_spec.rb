@@ -79,4 +79,17 @@ RSpec.describe Post, type: :model do
     end
   end
 
+  describe "after_create" do
+    before do
+      @new_post = topic.posts.new(title: "Post title", body: "This is test Post Body for notification", user: user)
+    end
+
+    it "sends an email to post creator with notification" do
+      favorite = user.favorites.create(post: @new_post)
+      expect(FavoriteMailer).to receive(:new_post).with(user, @new_post).and_return(double(deliver_now: true))
+
+      @new_post.save!
+    end
+  end
+
 end

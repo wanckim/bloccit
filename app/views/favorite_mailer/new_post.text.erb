@@ -1,0 +1,8 @@
+You have created the post "<%= @post.title %>"!
+<%= "=" * (@post.title.length + 12) %>
+
+By: <%= @post.user.name %>
+
+Your post "<%= @post.title %>" have successfully created and favorited! You will receive new comments notifications for this post.
+
+Visit online at: <%= topic_post_url(@post.topic, @post) %>
