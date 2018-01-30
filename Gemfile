@@ -52,6 +52,7 @@ source 'https://rubygems.org'
    gem 'rails-controller-testing'
    gem 'shoulda'
    gem 'byebug'
+   gem 'factory_girl_rails', '~> 4.0'
  end
 
  group :development do
