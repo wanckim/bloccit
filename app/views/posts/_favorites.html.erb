@@ -1,0 +1,14 @@
+<div class="media">
+  <div class="media-body">
+    <div style="display:inline-block">
+      <h4 class="media-heading">
+        <%= link_to post.title, topic_post_path(post.topic, post) %>
+        <small>by <%= post.user.name %></small>
+        <%= image_tag post.user.avatar_url(30) %>
+      </h4>
+      <small>
+        <%= post.votes.count %> Total Votes, <%= post.comments.count %> Comments
+      </small>
+    </div>
+  </div>
+</div>
